@@ -45,8 +45,8 @@ You can implement your custom server extension. You will get the decoded payload
 ```Ruby
 class MyServer
   def incoming(message, callback)
-    message['jwt']['payload'] // {"maybe" => "userinfo"}
-    message['jwt']['header'] // eg. {"typ"=>"JWT", "alg"=>"HS256"}
+    message['jwt']['payload'] # {"maybe" => "userinfo"}
+    message['jwt']['header'] # eg. {"typ"=>"JWT", "alg"=>"HS256"}
     callback.call(message)
   end
 end
